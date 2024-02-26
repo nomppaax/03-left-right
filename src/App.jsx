@@ -2,12 +2,10 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
-const Display = (props) => {
-  return <div>{props.counter}</div>;
-};
-const Button = (props) => {
-  return <button onClick={props.handleClick}>{props.text}</button>;
-};
+const Display = ({ counter }) => <div>{counter}</div>;
+const Button = ({ handleClick, text }) => (
+  <button onClick={handleClick}>{text}</button>
+);
 const App = () => {
   const [counter, setCounter] = useState(0);
 
